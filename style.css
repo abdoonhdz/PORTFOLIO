@@ -12,6 +12,10 @@
   font-family: 'Archivo Narrow', sans-serif;
 }
 
+html {
+  background-color: rgb(245, 245, 245);
+}
+
 header {
   position: relative;
   height: 35rem;
@@ -19,8 +23,7 @@ header {
 
 header::before {
   content: "";
-  background-image: url('imagenes/oficina.png');
-  background-attachment: fixed;
+  background: url('imagenes/oficina.png') fixed no-repeat center/cover;
   opacity: 0.3;
   position: absolute;
   top: 0;
@@ -41,7 +44,6 @@ header::before {
 
 #cabecera {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
 }
 
@@ -103,7 +105,6 @@ header::before {
 
 #lista {
   display: flex;
-  flex-direction: row;
 }
 
 ul {
@@ -113,7 +114,6 @@ ul {
   list-style: none;
   text-decoration: none;
   display: flex;
-  text-align: left;
   justify-content: space-between;
   color: var(--color-texto);
 }
@@ -227,12 +227,8 @@ a {
 
 .barra-logo {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   padding: 10px;
-}
-
-.barras-izquierda {
   margin-right: 8rem;
 }
 
@@ -250,29 +246,28 @@ a {
   color: var(--color-primario);
 }
 
-#arriba-formacion,
-#abajo-formacion {
+#arriba-formacion, #abajo-formacion {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.tarjetas-formacion-curso {
+.tarjetas-formacion-curso, .tarjetas-formacion-ow {
   margin-top: 2rem;
   display: flex;
   flex-direction: row;
+}
+
+.tarjetas-formacion-curso {
   gap: 3rem;
 }
 
 .tarjetas-formacion-ow {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: row;
-  gap: 8rem;
+  gap: 9rem;
 }
 
-.tarjeta {
+.tarjeta, .tarjeta-ow {
   width: 150px;
   background-color: #fbfbfb;
   filter: drop-shadow(1px 0.5px 1px var(--color-primario));
@@ -283,13 +278,8 @@ a {
 }
 
 .tarjeta-ow {
-  width: 150px;
-  background-color: #fbfbfb;
-  filter: drop-shadow(1px 0.5px 1px var(--color-primario));
-  height: 125px;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+  width: 300px;
+  height: auto;
 }
 
 .estudio hr {
@@ -302,4 +292,9 @@ a {
 .titulo-formacion {
   text-align: center;
   color: grey;
+}
+
+.estudio img {
+  width: 100%;
+  height: 100%;
 }
