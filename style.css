@@ -1,208 +1,305 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
 
-* {
-    margin: 0;
-    font-family: 'Archivo Narrow', sans-serif;}
-
-header {
-    position: relative;
-    height: 35rem;
-  }
-  
-  header::before {
-    content: "";
-    background-image: url('imagenes/oficina.png');
-    background-attachment: fixed;
-    opacity: 0.3; 
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-
-#nombre {
-    color: #FFAD00;
+:root {
+  --color-primario: #FFAD00;
+  --color-fondo: #F9F9F9;
+  --color-sombra: grey;
+  --color-texto: #000;
 }
 
-#github a{
-    color: #FFAD00;
-    text-decoration: underline;
+* {
+  margin: 0;
+  font-family: 'Archivo Narrow', sans-serif;
+}
+
+header {
+  position: relative;
+  height: 35rem;
+}
+
+header::before {
+  content: "";
+  background-image: url('imagenes/oficina.png');
+  background-attachment: fixed;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#nombre {
+  color: var(--color-primario);
+}
+
+#github a {
+  color: var(--color-primario);
+  text-decoration: underline;
 }
 
 #cabecera {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 #cabecera-arriba-izquierda {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #cabecera-arriba-izquierda h1 {
-    text-align: left;
-    font-size: 5rem;
+  text-align: left;
+  font-size: 5rem;
 }
 
 #cabecera-arriba-izquierda h2 {
-    font-size: 4rem;
+  font-size: 4rem;
 }
 
 #boton {
-    position: absolute;
-    left: 67.5%;
-    top: 54%;
-    transform: translateY(-50%);
-    background-color: #FFAD00;
-    border-radius: 5px;
-    color: #fff;
-    border: none;
-    filter: drop-shadow(4px 2px 4px grey);
-    width: 140px;
-    height: 35px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  position: absolute;
+  left: 67.5%;
+  top: 54%;
+  transform: translateY(-50%);
+  background-color: var(--color-primario);
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  filter: drop-shadow(4px 2px 4px var(--color-sombra));
+  width: 140px;
+  height: 35px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .elipse {
-    width: 1350px;
-    height: 400px;
-    clip-path: ellipse(76% 29% at 76% 100%);
-    background-color: #FFAD00;
-    position: absolute;
-    top: 28.5%;
-    right: 0%;
+  width: 1350px;
+  height: 400px;
+  clip-path: ellipse(76% 29% at 76% 100%);
+  background-color: var(--color-primario);
+  position: absolute;
+  top: 28.5%;
+  right: 0%;
 }
 
 #boton:hover {
-    background-color: #fff;
-    color: #FFAD00;
+  background-color: #fff;
+  color: var(--color-primario);
 }
 
 #imagenYo {
-    margin-top: 30px;
-    height: 30rem;
-    width: auto;
-    position: relative;
-    z-index: 1;
-    filter: drop-shadow(4px 2px 4px grey);
+  margin-top: 30px;
+  height: 30rem;
+  width: auto;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(4px 2px 4px var(--color-sombra));
 }
 
 #lista {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 ul {
-    padding: 10px;
-    width: 100%;
-    font-size: 20px;
-    list-style: none;
-    text-decoration: none;
-    display: flex;
-    text-align: left;
-    justify-content: space-between;
-    color: #000;
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  color: var(--color-texto);
 }
 
 li {
-    padding-right: 30px;
+  padding-right: 30px;
 }
 
 a {
-    color: #000;
-    text-decoration: none;
+  color: var(--color-texto);
+  text-decoration: none;
 }
 
-
 #proyectos {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 #proyectos h1 {
-    font-size: 3rem;
-    color: #FFAD00;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  color: var(--color-primario);
+  margin-bottom: 1rem;
 }
 
 .fotos-proyectos {
-    width: 100%;
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    gap: 1rem;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  gap: 1rem;
 }
 
 .proyecto-1 {
-    margin-left: 1rem;
-    background-image: url('imagenes/cifrado.PNG');
+  margin-left: 1rem;
+  background-image: url('imagenes/cifrado.PNG');
 }
 
 .proyecto-2 {
-    background-image: url('imagenes/contador.PNG');
+  background-image: url('imagenes/contador.PNG');
 }
 
 .proyecto-3 {
-    margin-right: 1rem;
-    background-image: url('imagenes/millonario.PNG');
+  margin-right: 1rem;
+  background-image: url('imagenes/millonario.PNG');
 }
 
-.proyecto-1, .proyecto-2, .proyecto-3 {
-    flex: 0.9; 
-    height: 400px; 
-    background-size: cover; 
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    cursor: pointer;
+.proyecto-1,
+.proyecto-2,
+.proyecto-3 {
+  flex: 0.9;
+  height: 400px;
+  background-size: cover;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.proyecto-1:hover, .proyecto-2:hover, .proyecto-3:hover {
-    transform: scale(1.04);
-    opacity: 0.9;
-    filter: drop-shadow(4px 2px 4px #000);
+.proyecto-1:hover,
+.proyecto-2:hover,
+.proyecto-3:hover {
+  transform: scale(1.04);
+  opacity: 0.9;
+  filter: drop-shadow(4px 2px 4px var(--color-primario));
 }
 
 #skills {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #skills-dentro {
-    width: 100%;
-    max-width: 1200px; 
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    grid-template-rows: repeat(3, auto); 
-    gap: 10px; 
-    background-color: #F9F9F9;
-    filter: drop-shadow(4px 2px 4px grey);
-
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  background-color: var(--color-fondo);
+  filter: drop-shadow(4px 2px 4px var(--color-sombra));
 }
 
 #titulo-skill {
-    grid-column: span 2; 
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 3rem;
-    color: #FFAD00;
+  grid-column: span 2;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 3rem;
+  color: var(--color-primario);
 }
 
-#barras-skills img {
-    width: 100%;
-    height: auto;
-    max-width: 100%; 
+#barras-skills {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
+#barras-skills {
+  margin-left: 4rem;
+  width: 300px;
+  height: auto;
+}
 
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.barra-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+}
+
+.barras-izquierda {
+  margin-right: 8rem;
+}
+
+#formacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+#formacion h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--color-primario);
+}
+
+#arriba-formacion,
+#abajo-formacion {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.tarjetas-formacion-curso {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.tarjetas-formacion-ow {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 8rem;
+}
+
+.tarjeta {
+  width: 150px;
+  background-color: #fbfbfb;
+  filter: drop-shadow(1px 0.5px 1px var(--color-primario));
+  height: 175px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-ow {
+  width: 150px;
+  background-color: #fbfbfb;
+  filter: drop-shadow(1px 0.5px 1px var(--color-primario));
+  height: 125px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.estudio hr {
+  border: none;
+  border-top: 1px solid var(--color-primario);
+  width: 80%;
+  margin: 20px auto;
+}
+
+.titulo-formacion {
+  text-align: center;
+  color: grey;
+}
