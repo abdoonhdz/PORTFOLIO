@@ -63,8 +63,8 @@ header {
     color: #fff;
     border: none;
     filter: drop-shadow(4px 2px 4px grey);
-    width: 125px;
-    height: 30px;
+    width: 140px;
+    height: 35px;
     font-size: 1.2rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -131,6 +131,7 @@ a {
 #proyectos h1 {
     font-size: 3rem;
     color: #FFAD00;
+    margin-bottom: 1rem;
 }
 
 .fotos-proyectos {
@@ -139,7 +140,7 @@ a {
     display: flex;
     flex-direction: row;
     margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     gap: 1rem;
 }
 
@@ -158,10 +159,11 @@ a {
 }
 
 .proyecto-1, .proyecto-2, .proyecto-3 {
-    flex: 1; 
+    flex: 0.9; 
     height: 400px; 
     background-size: cover; 
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .proyecto-1:hover, .proyecto-2:hover, .proyecto-3:hover {
@@ -169,3 +171,38 @@ a {
     opacity: 0.9;
     filter: drop-shadow(4px 2px 4px #000);
 }
+
+#skills {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#skills-dentro {
+    width: 100%;
+    max-width: 1200px; 
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    gap: 10px; 
+    background-color: #F9F9F9;
+    filter: drop-shadow(4px 2px 4px grey);
+
+}
+
+#titulo-skill {
+    grid-column: span 2; 
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 3rem;
+    color: #FFAD00;
+}
+
+#barras-skills img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; 
+}
+
+
