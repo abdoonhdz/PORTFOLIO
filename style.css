@@ -331,6 +331,10 @@ a {
   width: 50%;
 }
 
+#contacto input[type="text"]::placeholder {
+  color: var(--color-fondo);
+}
+
 #contacto input[type="submit"] {
   background-color: var(--color-fondo); 
   color: var(--color-primario);
@@ -349,4 +353,23 @@ a {
 #contacto input[type="submit"]:hover {
   background-color: var(--color-texto);
   color: var(--color-fondo);
+}
+
+
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  margin-top: 4rem;
+  transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out, 0.8s font-size ease-in-out;
+  font-size: 20px;
+}
+
+footer:hover {
+  background-color: rgb(245, 245, 245);
+  color: var(--color-primario);
+  font-size: 40px;
 }
