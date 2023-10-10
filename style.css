@@ -76,7 +76,7 @@ header::before {
   height: 35px;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .elipse {
@@ -87,6 +87,7 @@ header::before {
   position: absolute;
   top: 28.5%;
   right: 0%;
+  opacity: 0.65;
 }
 
 #boton:hover {
@@ -182,13 +183,13 @@ a {
   filter: drop-shadow(4px 2px 4px var(--color-primario));
 }
 
-#skills {
+#skills, #idioma {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-#skills-dentro {
+#skills-dentro, #idioma-dentro {
   width: 100%;
   max-width: 1000px;
   padding: 20px;
@@ -200,7 +201,7 @@ a {
   filter: drop-shadow(4px 2px 4px var(--color-sombra));
 }
 
-#titulo-skill {
+#titulo-skill, #titulo-idioma {
   grid-column: span 2;
   text-align: center;
   margin-bottom: 10px;
@@ -208,13 +209,10 @@ a {
   color: var(--color-primario);
 }
 
-#barras-skills {
+#barras-skills, #barras-idiomas {
   width: 100%;
   display: flex;
   flex-direction: row;
-}
-
-#barras-skills {
   margin-left: 4rem;
   width: 300px;
   height: auto;
@@ -297,4 +295,58 @@ a {
 .estudio img {
   width: 100%;
   height: 100%;
+}
+
+#contacto {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-star;
+  background-color: var(--color-primario);
+  width: 25%;
+  margin: auto;
+  filter: drop-shadow(4px 2px 4px var(--color-sombra));
+  text-align: centers;
+}
+
+#titulo-contacto {
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  font-size:3rem;
+  color: var(--color-primario);
+}
+
+#contacto label {
+  color: var(--color-fondo);
+}
+
+#contacto input[type="text"] {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-fondo);
+  color: var(--color-fondo);
+  width: 50%;
+}
+
+#contacto input[type="submit"] {
+  background-color: var(--color-fondo); 
+  color: var(--color-primario);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  filter: drop-shadow(2px 1px 2px var(--color-sombra));
+  width: 125px;
+  height: 38px;
+  justify-content: center;
+
+}
+
+#contacto input[type="submit"]:hover {
+  background-color: var(--color-texto);
+  color: var(--color-fondo);
 }
