@@ -361,15 +361,15 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
-  background-color: var(--color-primario);
-  color: var(--color-fondo);
+  background-color: rgb(245, 245, 245);
+  color: var(--color-primario);
   margin-top: 4rem;
   transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out, 0.8s font-size ease-in-out;
   font-size: 20px;
 }
 
 footer:hover {
-  background-color: rgb(245, 245, 245);
-  color: var(--color-primario);
-  font-size: 40px;
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
+  font-size: 30px;
 }
