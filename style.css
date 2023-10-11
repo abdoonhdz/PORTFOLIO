@@ -128,6 +128,13 @@ a {
   text-decoration: none;
 }
 
+li a {
+  transition: 0.2s color ease-in-out;
+}
+
+li a:hover {
+  color: var(--color-primario);
+}
 
 .proyecto-container {
   display: flex;
