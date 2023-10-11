@@ -354,7 +354,7 @@ footer {
 }
 
 footer:hover {
-  background-color: rgb(245, 245, 245);
-  color: var(--color-primario);
+  background-color: var(--color-primario);
+  color: var(--color-fondo);
   font-size: 30px;
 }
