@@ -23,7 +23,7 @@ header {
 
 header::before {
   content: "";
-  background: url('imagenes/oficina.png') fixed no-repeat center/cover;
+  background: url('imagenes/cabecera/oficina.png') fixed no-repeat center/cover;
   opacity: 0.3;
   position: absolute;
   top: 0;
@@ -146,7 +146,7 @@ li a:hover {
   margin: 10px;
   background-color: #fff;
   padding: 20px;
-  filter: drop-shadow(1px 1px 1px var(--color-primario));
+  filter: drop-shadow(1px 1px 1px var(--color-sombra));
   text-align: center;
   transition: transform 0.3s ease-in-out;
 }
@@ -165,6 +165,7 @@ li a:hover {
 
 .proyecto:hover {
   transform: scale(1.05);
+  filter: drop-shadow(1px 1px 1px var(--color-primario));
 }
 
 #skills, #idioma {
@@ -292,22 +293,25 @@ li a:hover {
 #contacto {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  padding-left: 7rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-star;
+  align-items: center; 
   background-color: var(--color-primario);
-  width: 25%;
-  margin: auto;
+  width: 35%;
+  margin: 0 auto; 
   filter: drop-shadow(4px 2px 4px var(--color-sombra));
-  text-align: centers;
+  text-align: center;
+}
+
+form {
+  width: 70%;
 }
 
 #titulo-contacto {
   text-align: center;
   margin-top: 6rem;
   margin-bottom: 2rem;
-  font-size:3rem;
+  font-size: 3rem;
   color: var(--color-primario);
 }
 
@@ -320,7 +324,7 @@ li a:hover {
   background-color: transparent;
   border-bottom: 1px solid var(--color-fondo);
   color: var(--color-fondo);
-  width: 50%;
+  width: 70%; /
 }
 
 #contacto input[type="text"]::placeholder {
@@ -328,22 +332,22 @@ li a:hover {
 }
 
 #contacto input[type="submit"] {
-  background-color: var(--color-fondo); 
+  background-color: var(--color-fondo);
   color: var(--color-primario);
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, 0.1s border ease-in-out;
   filter: drop-shadow(2px 1px 2px var(--color-sombra));
-  width: 125px;
-  height: 38px;
-  justify-content: center;
-
+  width: 125px; 
+  height: 38px; 
 }
 
+
 #contacto input[type="submit"]:hover {
-  background-color: var(--color-texto);
+  border: 2px solid var(--color-fondo);
+  background-color: #FFAD00;
   color: var(--color-fondo);
 }
 
@@ -351,17 +355,22 @@ li a:hover {
 
 footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 2rem;
   background-color: var(--color-primario);
   color: var(--color-fondo);
   margin-top: 6rem;
-  transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out, 0.8s font-size ease-in-out;
+  transition: 0.3s background-color ease-in-out, 0.3s color ease-in-out;
   font-size: 20px;
+  text-align: center;
 }
 
 footer:hover {
-  background-color: var(--color-primario);
-  color: var(--color-fondo);
-  font-size: 30px;
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
 }
+
+footer img {
+  width: 40px;
+}
+
