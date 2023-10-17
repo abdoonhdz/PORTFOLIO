@@ -11,11 +11,11 @@ function crearElementos() {
     setTimeout(function() {
         mainElement.removeChild(copo);
     }, 3500);
-}
 
-copo.addEventListener('click', function() {
-    mainElement.removeChild(copo);
-});
+    copo.addEventListener('click', function() {
+        mainElement.removeChild(copo);
+    });
+}
 
 let intervalo = 650;
 setInterval(crearElementos, intervalo);
