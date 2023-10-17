@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgb(0,180,194);
+    background: linear-gradient(90deg, rgba(0,180,194,1) 9%, rgba(196,0,255,1) 68%);
+}
+
+main {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 60px;
+}
+
+.copo {
+    position: absolute;
+    font-size: 50px;
+    color: #fff;
+    animation: caida 4s linear infinite;
+}
+
+@keyframes caida {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(100vh);
+    }
+}
