@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000033;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(25, 20px);
+    grid-template-rows: repeat(25, 20px);
+    gap: 2px;
+}
+
+.celda {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #00032f;
+    background-color: #333;
+    transition: background-color 0.2s;
+}

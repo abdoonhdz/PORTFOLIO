@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Formulario Registro</title>
+</head>
+
+<body>
+  <main>
+    <form name="Formulario login" id="loginForm" action="#" method="post">
+      <img src="img/instagram-logo-illustration-removebg-preview.png" alt="">
+      <h1>Regístrate para ver fotos y vídeos de tus amigos.</h1>
+      <div class="inputContainer">
+        <input id="userName" type="text" placeholder="Usuario" required>
+        <small> </small>
+      </div>
+      <div class="inputContainer">
+        <input id="telefono" type="number" placeholder="Número de teléfono" required>
+        <small> </small>
+      </div>
+      <div class="inputContainer">
+        <input id="userPassword" type="password" placeholder="Contraseña" required>
+        <small> </small>
+      </div>
+      <div class="inputContainer">
+        <input id="confirmUserPassword" type="password" placeholder="Confirmar contraseña" required>
+        <small> </small>
+      </div>
+      <div class="inputContainer">
+        <div class="checkbox">
+          <input id="terminos" type="checkbox" required>
+          <p>
+            Acepto las <a href="https://policies.google.com/terms?hl=es">Condiciones de uso.</a>
+          </p>
+        </div>
+        <small> </small>
+      </div>
+      <button id="submitButton" type="submit" class="notAvailable">Registrarse</button>
+    </form>
+  </main>
+</body>
+
+</html>
