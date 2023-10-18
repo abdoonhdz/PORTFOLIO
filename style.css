@@ -14,6 +14,23 @@
 
 html {
   background-color: rgb(245, 245, 245);
+  scroll-behavior: smooth;
+}
+
+.cuerpo {
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  animation: desvanecer 2s ease-in-out;
+}
+
+@keyframes desvanecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 header {
@@ -387,4 +404,5 @@ footer:hover {
 footer img {
   width: 40px;
 }
+
 
