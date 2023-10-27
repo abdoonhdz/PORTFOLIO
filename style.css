@@ -165,7 +165,8 @@ li a:hover {
   padding: 20px;
   filter: drop-shadow(1px 1px 1px var(--color-sombra));
   text-align: center;
-  transition: transform 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 .proyecto a {
@@ -183,6 +184,14 @@ li a:hover {
 .proyecto:hover {
   transform: scale(1.05);
   filter: drop-shadow(1px 1px 1px var(--color-primario));
+}
+
+.proyecto h2 {
+  transition: 0.3s color ease-in-out;
+}
+
+.proyecto:hover h2 {
+  color: var(--color-primario);
 }
 
 #skills, #idioma {
