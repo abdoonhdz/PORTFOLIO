@@ -1,0 +1,178 @@
+:root {
+    --color-hoverNavegacion: rgb(255, 162, 0);
+    --color-titulos: #8D5429;
+}
+
+@import url('https://fonts.cdnfonts.com/css/damion');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-completo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/maquina-coffe.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 650px;
+    color: white;
+}
+
+.navegacion {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.barra-navegacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-navegacion {
+    font-family: Nevis, sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    padding: 8px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.li-navegacion {
+    padding: 20px;
+    list-style: none;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+    font-family: Nevis, sans-serif;
+    transition: .3s ease-in-out;
+}
+
+.li-navegacion:hover {
+    color: var(--color-hoverNavegacion);
+    cursor: pointer;
+}
+
+.imagen-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.titulo-contenido {
+    font-family: Nevis, sans-serif;
+    font-weight: 600;
+    font-size: 13rem;
+}
+
+.subtitulo-contenido {
+    font-family: Damion, sans-serif;
+    font-size: 60px;
+    animation: derechaIzquierda 1.5s linear;
+}
+
+.icono-flecha {
+    margin-top: 6rem;
+}
+
+.fa-solid {
+    font-size: 40px;
+    animation: movimiento 1s infinite;
+}
+
+@keyframes movimiento {
+    0% {
+        transform: translateY(20px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes derechaIzquierda {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.seccion-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 5rem;
+}
+
+.seccion-1-izquierda {
+    text-align: center;
+    width: 400px;
+    margin-left: -5rem;
+}
+
+.seccion-1-derecha img {
+    width: 200px;
+    height: 400px;
+}
+
+.seccion-1-derecha {
+    text-align: center;
+    animation: derechaIzquierda 1.5s linear;
+    display: flex;
+    flex-direction: column;
+}
+
+.seccion-1-derecha a {
+    text-decoration: underline;
+    color: var(--color-titulos);
+}
+
+.seccion-1-izquierda h3 {
+    color: var(--color-titulos);
+    font-size: 40px;
+}
+
+.seccion-1-izquierda h4 {
+    font-family: Damion, sans-serif;
+    font-size: 30px;
+}
+
+.seccion-1-izquierda p {
+    margin-top: 20px;
+}
+
+.seccion-2 {
+    
+}
