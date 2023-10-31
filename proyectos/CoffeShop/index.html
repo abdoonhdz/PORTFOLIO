@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,12 +51,56 @@
             </div>
         </div>
         <div class="seccion-2">
-            <h1>FOUR LOCATIONS</h1>
-            <h3>One Signature Experience</h3>
+            <div class="seccion-2-dentro">
+                <h1>FOUR <br> LOCATIONS.</h1>
+                <h3>One Signature Experience.</h3>
+            </div>
+        </div>
+        <div class="seccion-3">
+            <div class="seccion-3-izquierda">
+                <div class="seccion-3-izquierda-dentro">
+                    <h3>NEED INTERNET?</h3>
+                    <h4>We have that too!</h4>
+                    <img src="img/decoracion.png" alt="decoracion">
+                    <div class="ipad-portatil">
+                        <img src="img/portatil-ipad.png" alt="portatil-ipad">
+                    </div>
+                </div>
+            </div>
+            <div class="seccion-3-derecha">
+                <div class="seccion-3-derecha-dentro">
+                    <img src="img/camiseta.png" alt="camiseta">
+                    <button>SHOP OUR MERCH</button>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
-
+        <div class="titulo-footer">
+            <h3>LOCATIONS AND HOURS</h3>
+        </div>
+        <div class="info-footer">
+            <p>123 Sesame Street | Seattle, WA 98001</p>
+            <p>(800) 867 5309</p>
+        </div>
+        <div class="fin-footer">
+            <p>Both of Us &copy; 2017 · Privacy Policy</p>
+        </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        // Detecta cuando el usuario ha llegado a la sección-1
+        $(window).scroll(function() {
+            var seccion1Offset = $('.seccion-1').offset().top;
+            var windowScroll = $(window).scrollTop();
+    
+            if (windowScroll >= seccion1Offset) {
+            // Agrega la clase para activar la animación
+            $('.seccion-1-derecha img').addClass('slide');
+            }
+        });
+    });
+</script>
 </body>
 </html>
