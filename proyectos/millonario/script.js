@@ -6,7 +6,15 @@ const sortBtn = document.getElementById('sort');
 const calculateWealthBtn = document.getElementById('calculate-wealth');
 
 // Vector para almacenar los usuarios
-let userList = [];
+
+let array = localStorage.getItem("userList")
+
+if (array !== null) {
+  var userList = JSON.parse(array);
+  updateDOM();
+} else {
+  var userList = [];
+}
 
 // Función que obtiene de la API un nombre aleatorio,
 // genera una cantidad de dinero aleatoria cuyo máximo es 1.000.000
@@ -32,22 +40,24 @@ function addData(obj) {
 
 // Función que dobla el dinero de todos los usuarios existentes
 function doubleMoney() {
-  userList = userList.map((user) => {
-    return { ...user, money: user.money * 2 };
+    userList.map((user) => {
+    user.money*=2
   });
 
-  updateDOM();
+  updateDOM();  
 }
 
 // Función que ordena a los usuarios por la cantidad de dinero que tienen
 function sortByRichest() {
   userList.sort((a, b) => b.money - a.money);
+
   updateDOM();
 }
 
 // Función que muestra únicamente a los usuarios millonarios (tienen más de 1.000.000)
 function showMillionaires() {
   userList = userList.filter((user) => user.money >= 1000000);
+
   updateDOM();
 }
 
@@ -55,24 +65,26 @@ function showMillionaires() {
 function calculateWealth() {
   const totalWealth = userList.reduce((acc, user) => (acc += user.money), 0);
   const wealthElement = document.createElement('div');
-  wealthElement.innerHTML = `<h3>Dinero total: <strong>${formatMoney(
-    totalWealth
-  )}</strong></h3>`;
+  let wealthFormated = formatMoney(totalWealth);
+  wealthElement.innerHTML = `<h3>Dinero total: <strong>${wealthFormated}</strong></h3>`;
   main.appendChild(wealthElement);
+  const newUserToJSON = JSON.stringify(wealthFormated);
+  localStorage.setItem('wealthFormated', newUserToJSON);
 }
 
 // Función que actualiza el DOM
 function updateDOM() {
-  main.innerHTML = '<h2><strong>Person</strong> Wealth</h2>';
+  main.innerHTML = '<h2><strong>Persona</strong> Dinero</h2>';
 
   userList.forEach((user) => {
     const userElement = document.createElement('div');
     userElement.classList.add('person');
-    userElement.innerHTML = `<strong>${user.name}</strong> ${formatMoney(
-      user.money
-    )}`;
+    userElement.innerHTML = `<strong>${user.name}</strong> ${formatMoney(user.money)}`;
     main.appendChild(userElement);
   });
+  const newUserToJSON = JSON.stringify(userList);
+  localStorage.setItem('userList', newUserToJSON);
+
 }
 
 // Función que formatea un número a dinero
@@ -88,4 +100,7 @@ addUserBtn.addEventListener('click', getRandomUser);
 doubleBtn.addEventListener('click', doubleMoney);
 sortBtn.addEventListener('click', sortByRichest);
 showMillionairesBtn.addEventListener('click', showMillionaires);
-calculateWealthBtn.addEventListener('click', calculateWealth);
+calculateWealthBtn.addEventListener('click', () => {
+  calculateWealth();
+  //calculateWealthBtn.disabled = true;
+});
