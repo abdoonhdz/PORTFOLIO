@@ -90,13 +90,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
     $(document).ready(function() {
-        // Detecta cuando el usuario ha llegado a la sección-1
         $(window).scroll(function() {
             var seccion1Offset = $('.seccion-1').offset().top;
             var windowScroll = $(window).scrollTop();
     
             if (windowScroll >= seccion1Offset) {
-            // Agrega la clase para activar la animación
             $('.seccion-1-derecha img').addClass('slide');
             }
         });
