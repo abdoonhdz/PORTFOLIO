@@ -1,97 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio</title>
 </head>
+
 <body class="cuerpo">
     <header>
         <nav>
             <ul>
                 <div id="lista">
-                   <b><li>Inicio</li></b>
-                   <b><li><a href="#proyecto-titulo">Proyectos</li></a></b>
-                   <b><li><a href="#skills">Skills</li></a></b>
-                   <b><li><a href="#formacion">Formacion</li></a></b>
-                   <b><li><a href="#idioma">Idiomas</li></a></b>
-                   <b><li><a href="#contacto">Contacto</li></a></b>
+                    <b>
+                        <li>Inicio</li>
+                    </b>
+                    <b>
+                        <li><a href="#proyecto-titulo">Proyectos</li></a>
+                    </b>
+                    <b>
+                        <li><a href="#skills">Skills</li></a>
+                    </b>
+                    <b>
+                        <li><a href="#formacion">Formacion</li></a>
+                    </b>
+                    <b>
+                        <li><a href="#idioma">Idiomas</li></a>
+                    </b>
+                    <b>
+                        <li><a href="#contacto">Contacto</li></a>
+                    </b>
                 </div>
-                <b><li id="cambiar-idioma"><a href="portfolio-english.html">EN</a> | ES</li></b>
+                <b>
+                    <li id="cambiar-idioma"><a href="portfolio-english.html">EN</a> | ES</li>
+                </b>
             </ul>
         </nav>
         <div id="cabecera">
-                <div id="cabecera-arriba-izquierda">
-                    <h1>Hola,</h1>
-                    <h2>Soy <span id="nombre">Abdón Hernández</span></h2>
-                </div>
-                <div id="cabecera-arriba-derecha">
-                    
-                    <img src="img/cabecera/yo.png" alt="yo" id="imagenYo">
-                    <div class="elipse"></div>
-                    <a href="" download><button id="boton">Descargar CV</button></a>
-                </div>
+            <div id="cabecera-arriba-izquierda">
+                <h1>Hola,</h1>
+                <h2>Soy <span id="nombre">Abdón Hernández</span></h2>
+            </div>
+            <div id="cabecera-arriba-derecha">
+
+                <img src="img/cabecera/yo.png" alt="yo" id="imagenYo">
+                <div class="elipse"></div>
+                <a href="" download><button id="boton">Descargar CV</button></a>
+            </div>
         </div>
     </header>
     <h1 id="proyecto-titulo">Proyectos</h1>
     <div class="proyecto-container">
         <br>
         <div class="proyecto">
-            <a href="proyectos/millonario/index.html" target="_blank">
-                <img src="img/proyectos/millonario.PNG">
+            <a href="proyectos/cifrado/index.html" target="_blank">
+                <img src="img/proyectos/cifrado.PNG">
                 <br>
                 <br>
+                <h2>Codificación mensajes</h2>
                 <br>
-                <h2>Millonario</h2>
             </a>
         </div>
 
         <div class="proyecto">
             <a href="proyectos/gestion de fechas/index.html" target="_blank">
                 <img src="img/proyectos/contador.PNG">
+                <br>
+                <br>
                 <h2>Contador</h2>
+                <br>
             </a>
         </div>
-        
+
         <div class="proyecto">
             <a href="proyectos/formulario registro/index.html" target="_blank">
                 <img src="img/proyectos/registro.PNG">
                 <br>
+                <br>
                 <h2>Formulario Registro</h2>
-            </a>
-        </div>
-
-        <div class="proyecto">
-            <a href="proyectos/calendario/index.html" target="_blank">
-                <img src="img/proyectos/calendario.PNG">
                 <br>
-                <br>
-                <h2>Calendario 23-24</h2>
-            </a>
-        </div>
-
-        <div class="proyecto">
-            <a href="proyectos/tableroColores/index.html" target="_blank">
-                <img src="img/proyectos/tablero.PNG">
-                <h2>Tablero Colores</h2>
-            </a>
-        </div>
-
-        <div class="proyecto">
-            <a href="proyectos/window/index.html" target="_blank">
-                <img src="img/proyectos/window.PNG">
-                <br>
-                <br>
-                <h2>Window</h2>
-            </a>
-        </div>
-        <div class="proyecto">
-            <a href="proyectos/CoffeShop/index.html" target="_blank">
-                <img src="img/proyectos/coffeShop.PNG">
-                <br>
-                <br>
-                <h2>CoffeeShop</h2>
             </a>
         </div>
         <div class="proyecto">
@@ -100,6 +88,17 @@
                 <br>
                 <br>
                 <h2>Bloc de Notas</h2>
+                <br>
+            </a>
+        </div>
+
+        <div class="proyecto">
+            <a href="https://abdoonhdz.github.io/API-JUEGOSFREE/" target="_blank">
+                <img src="img/proyectos/api.PNG">
+                <br>
+                <br>
+                <h2>Free Games</h2>
+                <br>
             </a>
         </div>
     </div>
@@ -303,14 +302,14 @@
 
     <h3 id="titulo-contacto">Contacta conmigo por aquí:</h3>
 
-    <div id="contacto">    
+    <div id="contacto">
         <form action="" method="">
             <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br><br>
-    
+
             <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required><br><br>
-    
+
             <input type="text" id="mensaje" name="mensaje" placeholder="Mensaje" required><br><br>
-        
+
             <input type="submit" value="Enviar">
         </form>
     </div>
@@ -326,4 +325,5 @@
         </div>
     </footer>
 </body>
+
 </html>
